@@ -3,14 +3,14 @@ pipeline {
 
     parameters {
         booleanParam(name: 'DRY_RUN', defaultValue: true, description: 'List actions only, do not delete')
-        string(name: 'CACHE_ROOT', defaultValue: '/var/lib/jenkins/git-cache', description: 'Path to cached Git repos')
+        string(name: 'CACHE_ROOT', defaultValue: '/var/jenkins_home/git-cache', description: 'Path to cached Git repos')
         booleanParam(name: 'CLEAN_WORKSPACES', defaultValue: false, description: 'Clean old Jenkins workspaces')
         booleanParam(name: 'AGGRESSIVE', defaultValue: false, description: 'Run aggressive Git cleanup')
     }
 
     environment {
         AGE_DAYS = '30'
-        WORKSPACE_ROOT = '/var/lib/jenkins/workspace'
+        WORKSPACE_ROOT = '/var/jenkins_home/workspace'
     }
 
     stages {
