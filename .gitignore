@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+git_repos_list
+*.log
+*.tmp
+target/
+workspace/
