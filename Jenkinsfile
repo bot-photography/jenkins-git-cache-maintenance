@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'linux' }
 
     parameters {
         booleanParam(name: 'DRY_RUN', defaultValue: true, description: 'List actions only, do not delete')
